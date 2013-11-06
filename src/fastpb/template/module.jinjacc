@@ -20,9 +20,21 @@ fastpb_convert{{ TYPE.INT32 }}(::google::protobuf::int32 value)
 }
 
 static PyObject *
+fastpb_convert{{ TYPE.FIXED32 }}(::google::protobuf::uint32 value)
+{
+    return PyLong_FromUnsignedLong(value);
+}
+
+static PyObject *
 fastpb_convert{{ TYPE.INT64 }}(::google::protobuf::int64 value)
 {
     return PyLong_FromLongLong(value);
+}
+
+static PyObject *
+fastpb_convert{{ TYPE.FIXED64 }}(::google::protobuf::uint64 value)
+{
+    return PyLong_FromUnsignedLongLong(value);
 }
 
 static PyObject *
@@ -399,7 +411,8 @@ namespace {
           return -1;
         }
 
-      {% elif member.type == TYPE.INT64 or member.type == TYPE.SINT64 %}
+      {% elif member.type == TYPE.INT64 or member.type == TYPE.SINT64 
+           or member.type == TYPE.FIXED64 %}
         ::google::protobuf::int64 protoValue;
 
         // int64
@@ -413,7 +426,8 @@ namespace {
           return -1;
         }
 
-      {% elif member.type == TYPE.INT32 or member.type == TYPE.SINT32 %}
+      {% elif member.type == TYPE.INT32 or member.type == TYPE.SINT32
+           or member.type == TYPE.FIXED32 %}
         ::google::protobuf::int32 protoValue;
 
         // int32

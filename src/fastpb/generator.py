@@ -39,6 +39,8 @@ TYPE = {
   'INT64': descriptor_pb2.FieldDescriptorProto.TYPE_INT64,
   'SINT64': descriptor_pb2.FieldDescriptorProto.TYPE_SINT64,
   'UINT64': descriptor_pb2.FieldDescriptorProto.TYPE_UINT64,
+  'FIXED64': descriptor_pb2.FieldDescriptorProto.TYPE_FIXED64,
+  'FIXED32': descriptor_pb2.FieldDescriptorProto.TYPE_FIXED32,
   'MESSAGE': descriptor_pb2.FieldDescriptorProto.TYPE_MESSAGE,
   'BYTES': descriptor_pb2.FieldDescriptorProto.TYPE_BYTES,
   'BOOL': descriptor_pb2.FieldDescriptorProto.TYPE_BOOL,
