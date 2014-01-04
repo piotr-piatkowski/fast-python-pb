@@ -1,0 +1,17 @@
+fastpb (0.1-3) UNRELEASED; urgency=low
+
+  * remove ez-tools again, hopefuly correctly
+
+ -- Piotr Piatkowski <kompas@idea7.pl>  Wed, 06 Nov 2013 11:13:24 +0100
+
+fastpb (0.1-2) unstable; urgency=low
+
+  * Removed virtual python-ez-tools from dependencies
+
+ -- Piotr Piatkowski <kompas@idea7.pl>  Wed, 06 Nov 2013 11:01:11 +0100
+
+fastpb (0.1-1) unstable; urgency=low
+
+  * source package automatically created by stdeb 0.6.0+git
+
+ -- Piotr Piatkowski <pp@idea7.pl>  Wed, 06 Nov 2013 09:57:42 +0100
